@@ -1,0 +1,155 @@
+/* ===========================
+   Team Card
+=========================== */
+
+.team-card{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    background:#ffffff;
+    border-radius:22px;
+    overflow:hidden;
+    margin-top:30px;
+    box-shadow:0 18px 45px rgba(15,23,42,0.12);
+    transition:0.4s ease;
+}
+
+.team-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(37,99,235,0.18);
+}
+
+/* Left Side */
+
+.team-card img{
+    width:100%;
+    height:100%;
+    min-height:420px;
+    object-fit:cover;
+}
+
+/* Right Side */
+
+.team-content{
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background:linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fbff
+    );
+}
+
+.team-content h2{
+    font-size:34px;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+.team-content p{
+    font-size:16px;
+    line-height:1.8;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+/* Badge */
+
+.team-content::before{
+    content:"Development Team";
+    width:170px;
+    padding:8px;
+    text-align:center;
+    background:#dbeafe;
+    color:#2563eb;
+    font-weight:bold;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+/* Stats */
+
+.team-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.team-stats div{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #e2e8f0;
+    transition:0.3s;
+}
+
+.team-stats div:hover{
+    background:#2563eb;
+    color:white;
+    transform:translateY(-5px);
+}
+
+.team-stats h3{
+    font-size:28px;
+    margin-bottom:8px;
+    color:#2563eb;
+}
+
+.team-stats div:hover h3{
+    color:white;
+}
+
+.team-stats span{
+    font-size:15px;
+    font-weight:500;
+}
+
+/* Button */
+
+.team-btn{
+    margin-top:35px;
+}
+
+.team-btn button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+.team-btn button:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.team-card{
+    grid-template-columns:1fr;
+}
+
+.team-card img{
+    height:300px;
+}
+
+.team-content{
+    padding:30px;
+}
+
+.team-stats{
+    grid-template-columns:1fr;
+}
+
+.team-content h2{
+    font-size:28px;
+}
+
+}
